@@ -1,25 +1,21 @@
 <template>
   <div id="app">
-    <h2>111</h2>
-    <button @click="show">111</button>
+    <tabcon></tabcon>
+    <router-view></router-view>
   </div>
 </template>
 <script>
-  import {instance} from './network/request.js'
-  
+
+  import tabcon from 'components/content/tabcon.vue'
   export default {
     name:"app",
-    methods:{
-      show(){
-        instance({
-          url:"./news.json"
-        }).then(res=>{
-          console.log(res)
-        })
-      }
+    components:{
+      tabcon
     }
   }
 </script>
 <style>
+  @import 'assets/css/base.css';
+
 
 </style>
